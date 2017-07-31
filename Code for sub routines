@@ -1,0 +1,117 @@
+NOTE: "­"=minus sign; ""=slanted "n"
+AST (Assembly Screen Toggler)
+
+Copy the code from here like I did: http://tibasicdev.wikidot.com/hexcodes#toc37
+COPY IT <b> EXACTLY </b>
+
+end of AST
+
+
+BZB:
+
+For(,1,dim(⌊A
+Pxl-Off(⌊B()-1,⌊A()-1
+Pxl-Off(⌊B()+1,1+⌊A(:End
+­1
+
+end of BZB
+
+
+BZC:
+
+Pxl-Off(B+1,X
+Pxl-Off(B-1,X
+Pxl-Off(B,X+1
+Pxl-Off(B,X-1
+Line(X-1,1-B,X+1,­B-1
+Line(X+1,1-B,X-1,­B-1
+
+end of BZC
+
+
+BZD:
+
+Pxl-Change(Ans(2)-1,Ans(1)-1
+Pxl-Change(Ans(2)+1,Ans(1)-1
+Pxl-Change(Ans(2),Ans(1)-1
+Pxl-Change(Ans(2),Ans(1
+Pxl-Change(Ans(2)-1,Ans(1
+Pxl-Change(Ans(2)+1,Ans(1
+Pxl-Change(Ans(2),1+Ans(1
+Pxl-Change(Ans(2)+1,1+Ans(1
+Pxl-Change(Ans(2)-1,1+Ans(1
+
+end of BZD
+
+
+BZP
+
+Ans→θ
+If imag(Z:Then
+If K≠22:Then
+Repeat K=33 or K=22
+getKey→K
+For(,0,θ
+1+{X+4not(D),B-4D
+Line(Ans(1),Ans(2),Ans(1)-2,Ans(2)-2
+Line(Ans(1)-2,Ans(2),Ans(1),Ans(2)-2
+End
+If K=44 and (X>41-4θD or B<­45+4θnot(D:0→K
+If max(K={23,24,25,26,34,44,33
+Then:If K≠33
+Then
+For(,0,θ
+1+{X+4not(D),B-4D
+Line(Ans(1),Ans(2),Ans(1)-2,Ans(2)-2,0
+Line(Ans(1),Ans(2)-2,Ans(1)-2,Ans(2),0:End:End
+θnot(D
+If K=24 or K=26:5+4remainder(4X+K-16.25-Ans,10-Ans→X
+θD
+If K=34 or K=25
+­9-4remainder(7.75-4B-2(K=25)+1-Ans,10-Ans→B
+If K=33:Then
+If not(not(Σ(pxl-Test(­1-B+4D,X+4not(D)),,0,θ
+Then
+0→K:Else
+seq(X+4not(D),,0,θ→⌊A
+seq(4D-B,,0,θ→⌊B
+For(,1,dim(⌊A
+{⌊A(),⌊B(
+prgmBZD:End
+End:End
+If K=44
+not(D→D
+If K=23 and θ≠4
+Then
+For(,1,dim(⌊A
+{⌊A(),⌊B()
+prgmBZD
+End
+⌊A(1)=⌊A(2→D
+⌊A(1→X:­⌊B(1→B
+Return:End:End
+End
+End
+Else
+Repeat not(Σ(max(seq(pxl-Test(sin()+B+AD,X+Zcos()+Anot(D)),,0,Z270,90)),A,0,θ
+randInt(0,1→D
+1+randInt(0,9-θnot(D→X
+1+randInt(0,9-θD→B:End
+augment(seq(D+B,,0,θ),seq(not(D)+X,,0,θ
+For(,1,θ+1
+Pxl-On(Ans(),Ans(+θ+1:End
+5+4Ans→⌊B
+seq(44+⌊B(),,θ+2,dim(Ans→⌊A
+θ+1→dim(⌊B
+augment(⌊MX,⌊A→⌊MX
+augment(⌊MY,⌊B→⌊MY
+T-1→T
+Output(1,6,5-T
+Asm(prgmAST
+For(X,0,700:End
+Asm(prgmAST
+If F
+not(not(randInt(0,9→Z
+End
+
+end of BZP
