@@ -1,4 +1,4 @@
-NOTE:"­"=minus sign, ""=slanted "n"
+NOTE:"--"=negative sign, ""=slanted "n"
 {A,B,D,E,F,G,H,I,J,K,L,N,S,T,W,X,Z,θ→⌊V
 {0→⌊MX:Ans→⌊MY
 not(sin(π→M
@@ -9,8 +9,8 @@ ClrDraw:Degree
 GridOff:FnOff 
 AxesOff:0→Ymax
 0→Xmin:1→X
-­62→Ymin
-{­1→⌊C:Ans→⌊D
+--62→Ymin
+{--1→⌊C:Ans→⌊D
 Lbl M
 Menu("  BATTLE-BOATS  ","PLAY",P,"CONTROLS",C,"CREDITS",G,"QUIT",E
 Lbl G
@@ -69,11 +69,11 @@ Disp "I'M DONE :)
 For(X,0,700:End
 ClrDraw
 For(,7,47,4
-Line(-4,­47,-4,­7
-Line(3,­,43,­:Line(+44,­47,+44,­7
-Line(51,­,90,­
+Line(-4,--47,-4,--7
+Line(3,--,43,--:Line(+44,--47,+44,--7
+Line(51,--,90,--
 End
-0→D:17→X:­29→B
+0→D:17→X:--29→B
 Lbl 4:4
 prgmBZP
 If 23=K:Goto 5
@@ -126,7 +126,7 @@ If 1=abs(K-25
 If K=25 or K=34:9+4remainder(4J+6.75+2(K=34),10→J
 End:End
 Pxl-On(J,I
-For(A,­60,­50
+For(A,--60,--50
 Line(62,A,85,A,0:End
 Text(49,39,"MISSED
 If max((I=⌊MX) and (J=⌊MY
